@@ -1,2 +1,2 @@
 # BreslavetsAlexander.github.io
-budgetApp
+JS applications
