@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Delivery of rolls</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700&amp;subset=cyrillic-ext"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="container text-center">
+			<img src="img/logo.svg" width="95" alt="Суши и пицца">
+			<div class="display-4">Доставка роллов</div>
+			<p class="lead">Оперативно и вкусно</p>
+		</div>
+	</header>
+	<section>
+		<div class="container">
+			<div class="wrapper">
+				<div class="rolls"></div>
+				<div class="basket">
+					<div class="card basket-empty">
+						<div class="card-body">
+							<h5 class="card-title">Ваш заказ</h5>
+							<div class="alert alert-secondary" role="alert">
+								Корзина пуста
+							</div>
+						</div>
+					</div>
+					<div class="card basket-not-empty">
+						<div class="card-body">
+							<h5 class="card-title">Ваш заказ</h5>
+							<div class="cart-wrapper">
+								<div class="cart-products"></div>
+								<div class="cart-total">
+									<p>
+										<span class="h5">Доставка:</span> <span class="delivery-cost free rouble">250
+											₽</span>
+									</p>
+									<p>
+										<span class="h5">Сумма заказа:</span> <span
+											class="amount-without-delivery rouble">0</span> <span
+											class="rouble">₽</span>
+									</p>
+									<p>
+										<span class="h5">Итого:</span> <span class="rouble total-price">0</span> <span
+											class="rouble">₽</span>
+									</p>
+									<p class="delivery-text" style="font-size: 12px; margin-bottom: 0;">При заказе на
+										сумму
+										от 1650 ₽ доставка <span class="free"
+											style="text-transform: uppercase;">Бесплатная</span></p>
+								</div>
+							</div>
+						</div>
+						<div class="card-body border-top">
+							<h5 class="card-title">Оформить заказ</h5>
+							<form>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Ваш номер телефона">
+								</div>
+								<button type="submit" class="btn btn-primary">Заказать</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

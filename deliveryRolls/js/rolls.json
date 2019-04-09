@@ -1,0 +1,64 @@
+{
+    "rolls": [{
+
+            "src": "https://holyfood.com.ua/wp-content/uploads/2018/11/rolls-filadelfia-hit-roll-1024x1024.jpg",
+            "title": "Филадельфия хит ролл",
+            "weight": 180,
+            "price": 300
+        },
+        {
+            "src": "https://zakazaka.ru/db/menu/887/823/188m_rolls-rolly-v-tempure-krevetka-tempura-roll.39_300.3fxzq.jpg",
+            "title": "Калифорния темпура",
+            "weight": 205,
+            "price": 250
+        },
+        {
+            "src": "http://studiavkusa.ru/wp-content/uploads/2017/10/242-1300.jpg",
+            "title": "Запеченый ролл Калифорния",
+            "weight": 185,
+            "price": 230
+        },
+        {
+            "src": "https://imperator24.ru/assets/images/products/97/676-1300.jpg",
+            "title": "Филадельфия",
+            "weight": 230,
+            "price": 320
+        },
+        {
+            "src": "https://gukovskij.pizzasushiwok.ru/images/menu_new/720-1300.jpg",
+            "title": "Филадельфия ролл с угрем",
+            "weight": 185,
+            "price": 340
+        },
+        {
+            "src": "https://gukovskij.pizzasushiwok.ru/images/menu_new/745-1300.jpg",
+            "title": "Спайс ролл с креветкой",
+            "weight": 100,
+            "price": 190
+        },
+        {
+            "src": "https://gukovskij.pizzasushiwok.ru/images/menu_new/725-1300.jpg",
+            "title": "Токио темпура ролл",
+            "weight": 210,
+            "price": 340
+        },
+        {
+            "src": "https://gukovskij.pizzasushiwok.ru/images/menu_new/723-1300.jpg",
+            "title": "Каролина ролл",
+            "weight": 180,
+            "price": 460
+        },
+        {
+            "src": "https://gukovskij.pizzasushiwok.ru/images/menu_new/752-1300.jpg",
+            "title": "Сэнсэй ролл",
+            "weight": 190,
+            "price": 290
+        },
+        {
+            "src": "https://gukovskij.pizzasushiwok.ru/images/menu_new/753-1300.jpg",
+            "title": "Цезарь темпура ролл",
+            "weight": 215,
+            "price": 200
+        }
+    ]
+}
