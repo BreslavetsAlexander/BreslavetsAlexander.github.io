@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        .todoDone {
+            text-decoration: line-through;
+            font-style: italic;
+            color: gray;
+        }
+
+        .item {
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 1.25rem;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+
+        .item label {
+            margin-top: -4.8px;
+            margin-left: 15px;
+        }
+
+        .form-check-input {
+            margin: 0;
+        }
+
+        .btn-done {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" style="margin-top: 10px;">
+            <div class="card-header">
+                <h4 class="card-title">Todo application</h4>
+            </div>
+            <div class="card-body">
+                <div class="input-group" id='actionPanel1'>
+                    <div class="input-group-prepend">
+                        <span id="selectAllAction">
+                            <button class="btn btn-outline-primary" type="button" id="selectAll"
+                                style="margin-right: 5px;">Select all</button>
+                        </span>
+                    </div>
+                    <input type="text" class="form-control" id='input'>
+                </div>
+                <div id='actionPanel2' style="display: none;">
+                    <div class="btn-group btn-block">
+                        <button type='button' class='btn btn-success' id="doneAction">Done</button>
+                        <button type='button' class='btn btn-info' id="restoreAction">Restore</button>
+                        <button type='button' class='btn btn-danger' id="removeAction">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <ul class="list-group list-group-flush" id='list'></ul>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
