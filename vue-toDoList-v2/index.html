@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        .todoDone {
+            text-decoration: line-through;
+            font-style: italic;
+            color: gray;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 1.25rem;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="card" style="margin-top: 10px;">
+                <div class="card-header">
+                    <h4 class="card-title">Todo application</h4>
+                </div>
+                <div class="card-body">
+                    <div class="input-group" id='actionPanel1' v-show="!countCheckedTasks">
+                        <div class="input-group-prepend">
+                            <span id="selectAllAction">
+                                <button class="btn btn-outline-primary" type="button" id="selectAll"
+                                    style="margin-right: 5px;" @click="selectAll">Select all</button>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" id='input' v-model="task" @keydown.enter="addTask">
+                    </div>
+                    <div id='actionPanel2' style="display: none;" v-show="countCheckedTasks">
+                        <div class="btn-group btn-block">
+                            <button type='button' class='btn btn-success' id="doneAction"
+                                @click="doneAndRestoreAll(true)">Done</button>
+                            <button type='button' class='btn btn-info' id="restoreAction"
+                                @click="doneAndRestoreAll(false)">Restore</button>
+                            <button type='button' class='btn btn-danger' id="removeAction"
+                                @click="removeAll">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush" id='list'>
+                    <li class="item" v-for="(item, i) in list" :key="i">
+                        <input v-model:checked="item.checked" style="margin: 0;" class="form-check-input"
+                            type="checkbox" :id="item.id">
+                        <label style="margin: -4.8px 0 0 15px" class="form-check-label" :class="{ todoDone: item.done }"
+                            :for="item.id">{{item.task}}</label>
+                        <button type="button" style="float: right;" class="btn btn-outline-success" v-show="!item.done"
+                            @click="item.done = true">Done</button>
+                        <div style="float: right;" v-if="item.done">
+                            <button type="button" class="btn btn-outline-danger"
+                                @click="list.splice(i, 1)">Remove</button>
+                            <button type="button" class="btn btn-outline-info"
+                                @click="item.done = false">Restore</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="js/main-vue.js"></script>
+</body>
+
+</html>
