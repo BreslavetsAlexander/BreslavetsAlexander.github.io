@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <title>Budget</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="budget-top">
+            <div class="budget__title">Мой бюджет за какой-то месяц:</div>
+            <div class="final-budget"
+                :style="{ color: (sumIncomes - sumExpenses)>0 ? '#28B9B5' : (sumIncomes - sumExpenses)<0 ? '#FF5049' : '#fff'}">
+                <span>{{(sumIncomes - sumExpenses)>0 ? '+' : ''}}</span>
+                <div class="budget__value">{{sumIncomes - sumExpenses}}</div>
+            </div>
+            <div class="budget__income">
+                <div class="budget__income--text">Доходы</div>
+                <div class="budget__income--value">
+                    <span class="symbol">{{sumIncomes>0 ? '+' : ''}}</span>
+                    <span class="value">{{sumIncomes}}</span>
+                </div>
+            </div>
+            <div class="budget__expenses">
+                <div class="budget__expenses--text">Расходы</div>
+                <div class="budget__expenses--value">
+                    <span class="symbol">{{sumExpenses>0 ? '-' : ''}}</span>
+                    <span class="value">{{sumExpenses}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="budget-bottom">
+            <div class="add">
+                <select class="add__type" v-model="defaultOption">
+                    <option v-for="option in options" :value="option">{{option}}</option>
+                </select>
+                <input v-model="desc" type="text" class="add__description" placeholder="Добавить описание">
+                <input v-model.number="sum" type="number" class="add__value" placeholder="Сумма">
+                <button class="add__btn" :style="{ color: defaultOption==='+' ? '#28B9B5' : '#FF5049'}"
+                    @click="addTitle"><i class="far fa-check-circle"></i></button>
+            </div>
+            <div class="container">
+                <div class="income">
+                    <h2 class="income__title">Доходы</h2>
+                    <ul class="income__list">
+                        <li v-for="(item, i) in incomes" :key="i">
+                            <div>{{item.desc}}</div>
+                            <div class="li_right" style="color: #28B9B5">
+                                <div class="div_right">+ {{item.sum}}</div>
+                                <img src="img/plus.svg" @click="incomes.splice(i,1)">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="expenses">
+                    <h2 class="expenses__title">Расходы</h2>
+                    <ul class="expenses__list">
+                        <li v-for="(item, i) in expenses" :key="i">
+                            <div>{{item.desc}}</div>
+                            <div class="li_right" style="color: #FF5049">
+                                <div class="div_right">- {{item.sum}}</div>
+                                <img src="img/minus.svg" @click="expenses.splice(i,1)">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="js/main-vue.js"></script>
+</body>
+
+</html>
