@@ -8,7 +8,7 @@
 ### toDoList-v2 - [BreslavetsAlexander.github.io/toDoList-v2](https://BreslavetsAlexander.github.io/toDoList-v2)
 
 ## React.js
-### toDoList-v2 - [BreslavetsAlexander.github.io/react-toDoList-v2](https://BreslavetsAlexander.github.io/react-toDoList-v2)
+### react-toDoList-v2 - [BreslavetsAlexander.github.io/react-toDoList-v2](https://BreslavetsAlexander.github.io/react-toDoList-v2)
 
 ## Vue.js
 ### vue-toDoList-v2 - [BreslavetsAlexander.github.io/vue-toDoList-v2](https://BreslavetsAlexander.github.io/vue-toDoList-v2)
