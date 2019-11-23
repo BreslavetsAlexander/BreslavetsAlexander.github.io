@@ -1,0 +1,58 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	background-color: #f8f9fa;
+}
+
+a {
+	color: #2985c8;
+}
+
+.logo {
+	cursor: pointer;
+}
+
+.rate {
+	display: flex;
+	flex-direction: column;
+	color: #78909c;
+	text-align: center;
+}
+
+.rate__value {
+	font-size: 26px;
+}
+
+.rate__name {
+	font-size: 13px;
+}
+
+.vote {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 25px;
+}
+
+.vote__plus,
+.vote__minus {
+	text-align: center;
+	font-size: 18px;
+}
+
+.vote__value {
+	text-align: center;
+	font-size: 26px;
+	font-weight: 600;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
