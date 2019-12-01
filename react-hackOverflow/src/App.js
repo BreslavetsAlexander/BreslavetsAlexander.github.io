@@ -37,7 +37,9 @@ export default class App extends React.Component {
   addComment(p, comment) {
     const problems = [...this.state.problems];
     const problem = problems.find(item => item.id === p.id);
-    problem.comments = [];
+    if (!problem.comments) {
+      problem.comments = [];
+    }
     problem.comments.push({
       id: problem.comments.length + 1,
       content: comment,
