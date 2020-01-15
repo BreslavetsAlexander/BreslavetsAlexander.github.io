@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
@@ -13,11 +13,9 @@ export function App() {
             <Navbar />
             <div className="container">
                 <Alert />
-                <Switch>
-                    <Route path="/" component={Home} />
-                    <Route path="/about" exact component={About} />
-                    <Route path="/profile/:name" exact component={Profile} />
-                </Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/about" exact component={About} />
+                <Route path="/profile/:name" exact component={Profile} />
             </div>
         </AppContext>
     );
