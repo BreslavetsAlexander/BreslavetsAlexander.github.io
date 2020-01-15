@@ -14,7 +14,7 @@ export function App() {
             <div className="container">
                 <Alert />
                 <Switch>
-                    <Route path="/" exact component={Home} />
+                    <Route path="/" component={Home} />
                     <Route path="/about" exact component={About} />
                     <Route path="/profile/:name" exact component={Profile} />
                 </Switch>
